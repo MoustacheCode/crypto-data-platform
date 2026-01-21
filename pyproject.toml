@@ -1,0 +1,20 @@
+[project]
+name = "crypto-data-platform"
+version = "0.1.0"
+description = "A compact, production-grade crypto data platform with ingestion, dbt, orchestration, and CI/CD."
+authors = [
+    { name = "Richard" }
+]
+requires-python = ">=3.10"
+
+dependencies = [
+    "requests",
+    "python-dotenv"
+]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W"]

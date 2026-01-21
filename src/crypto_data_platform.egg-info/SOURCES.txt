@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/crypto_data_platform.egg-info/PKG-INFO
+src/crypto_data_platform.egg-info/SOURCES.txt
+src/crypto_data_platform.egg-info/dependency_links.txt
+src/crypto_data_platform.egg-info/requires.txt
+src/crypto_data_platform.egg-info/top_level.txt
+src/ingestion/get_top_coins.py
+src/orchestration/flows/flow_get_top_coins.py
