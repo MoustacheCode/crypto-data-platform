@@ -1,0 +1,45 @@
+[0m09:49:18.331145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287740C1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028773CE8140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287744A6840>]}
+
+
+============================== 09:49:18.357168 | 0f8408f6-66aa-4c28-869b-3c1e9b26044a ==============================
+[0m09:49:18.357168 [info ] [MainThread]: Running with dbt=1.11.2
+[0m09:49:18.358075 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\RIK\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init crypto_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m09:49:18.383101 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\RIK\.dbt
+[0m09:49:18.386102 [debug] [MainThread]: Starter project path: C:\Users\RIK\crypto-data-platform\venv\Lib\site-packages\dbt\include\starter_project
+[0m09:49:18.416139 [info ] [MainThread]: 
+Your new dbt project "crypto_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m09:49:18.417131 [info ] [MainThread]: Setting up your profile.
+[0m09:51:22.343105 [info ] [MainThread]: Profile crypto_dbt written to C:\Users\RIK\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m09:51:22.345105 [debug] [MainThread]: Command `dbt init` succeeded at 09:51:22.344104 after 124.15 seconds
+[0m09:51:22.345105 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287746C19D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287739CB200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028773DC20F0>]}
+[0m09:51:22.346106 [debug] [MainThread]: Flushing usage events
+[0m09:51:23.270681 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:53:56.405930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029028929850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002902BFAC110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002902BFAD760>]}
+
+
+============================== 09:53:56.412945 | 24310f23-7897-409b-9f5c-983370867042 ==============================
+[0m09:53:56.412945 [info ] [MainThread]: Running with dbt=1.11.2
+[0m09:53:56.413938 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\RIK\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m09:53:56.413938 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\RIK\crypto-data-platform\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:53:56.415939 [debug] [MainThread]: Command `dbt run` failed at 09:53:56.415939 after 0.17 seconds
+[0m09:53:56.415939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029028929850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002902C38F260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002902BFAD6D0>]}
+[0m09:53:56.416949 [debug] [MainThread]: Flushing usage events
+[0m09:53:57.365180 [debug] [MainThread]: An error was encountered while trying to flush usage events

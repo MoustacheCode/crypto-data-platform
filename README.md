@@ -49,8 +49,6 @@ Navigate to `http://localhost:3000`
 Document endpoints and data schemas here.
 
 ## Technologies Used
-- Node.js / Python / [Your stack]
-- React / Vue / [Frontend framework]
 - [Database]
 - [Data source API]
 
@@ -64,4 +62,4 @@ Document endpoints and data schemas here.
 [Specify license type]
 
 ## Contact
-[Your contact information]
+Richard Duerden - Junior Developer
