@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_market_data
+    description: "Fact table containing measurable market data for each cryptocurrency"
+    columns:
+      - name: coin_id
+        description: "Foreign key to dim_coins"
+        tests:
+          - not_null
+
+      - name: current_price
+        description: "Current price in USD"
+        tests:
+          - not_null
+
+      - name: market_cap_rank
+        description: "Rank by market cap"
+        tests:
+          - not_null
+
+      - name: last_updated
+        description: "Timestamp of the latest update"
+        tests:
+          - not_null

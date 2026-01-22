@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_top_coins
+    description: "Cleaned staging model for top cryptocurrency data"
+    columns:
+      - name: coin_id
+        description: "Unique identifier for each coin"
+        tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        description: "Ticker symbol for the coin"
+        tests:
+          - not_null
+
+      - name: name
+        description: "Full name of the coin"
+        tests:
+          - not_null
+
+      - name: market_cap_rank
+        description: "Rank by market cap"
+        tests:
+          - not_null
+
+      - name: current_price
+        description: "Current price in USD"
+        tests:
+          - not_null
+
+      - name: last_updated
+        description: "Timestamp of last update"
+        tests:
+          - not_null
