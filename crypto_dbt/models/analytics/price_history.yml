@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: price_history
+    description: "Historical price and rank changes for each cryptocurrency"
+    columns:
+      - name: coin_id
+        description: "Foreign key to dim_coins"
+        tests:
+          - not_null
+
+      - name: current_price
+        description: "Price at the time of the snapshot"
+        tests:
+          - not_null
+
+      - name: valid_from
+        description: "Start of the period this record was valid"
+        tests:
+          - not_null
+
+      - name: valid_to
+        description: "End of the period this record was valid (null = still current)"
