@@ -1,7 +1,11 @@
 import requests
 import psycopg2
 from psycopg2.extras import execute_values
-from datetime import datetime
+from datetime import datetime, timezone
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 def fetch_top_coins():
     url = "https://api.coingecko.com/api/v3/coins/markets"
@@ -33,7 +37,7 @@ def load_to_postgres(data):
             coin["name"],
             coin["market_cap_rank"],
             coin["current_price"],
-            datetime.utcnow()
+            datetime.now(timezone.utc)
         )
         for coin in data
     ]
@@ -55,4 +59,8 @@ def main():
     load_to_postgres(data)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main() 
+    except Exception as e:
+        print(f"Error during ingestion: {e}") 
+        raise
