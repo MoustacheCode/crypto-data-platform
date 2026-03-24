@@ -4,6 +4,9 @@ type Coin = {
     symbol: string;
     price: number;
     change24h: number;
+    image: string;
+    marketCap: number;
+    volume: number;
 };
 
 export default function CoinsTable({ coins }: { coins: Coin[] }) {
@@ -18,6 +21,8 @@ export default function CoinsTable({ coins }: { coins: Coin[] }) {
                             <th className="p-3">Rank</th>
                             <th className="p-3">Name</th>
                             <th className="p-3">Price</th>
+                            <th className="p-3">Market Cap</th>
+                            <th className="p-3">Volume</th>
                             <th className="p-3">24h Change</th>
                         </tr>
                     </thead>
@@ -29,15 +34,38 @@ export default function CoinsTable({ coins }: { coins: Coin[] }) {
                                 className="border-b border-gray-800"
                             >
                                 <td className="p-3">{coin.rank}</td>
+
+                                {/* Name + Logo */}
                                 <td className="p-3">
-                                    {coin.name}{" "}
-                                    <span className="text-gray-400 text-sm">
-                                        ({coin.symbol.toUpperCase()})
-                                    </span>
+                                    <div className="flex items-center gap-2">
+                                        <img
+                                            src={coin.image}
+                                            alt={coin.name}
+                                            width={24}
+                                            height={24}
+                                            className="rounded-full"
+                                        />
+                                        <span>
+                                            {coin.name}{" "}
+                                            <span className="text-gray-400 text-sm">
+                                                ({coin.symbol.toUpperCase()})
+                                            </span>
+                                        </span>
+                                    </div>
                                 </td>
+
                                 <td className="p-3">
                                     ${coin.price.toLocaleString()}
                                 </td>
+
+                                <td className="p-3">
+                                    ${coin.marketCap.toLocaleString()}
+                                </td>
+
+                                <td className="p-3">
+                                    ${coin.volume.toLocaleString()}
+                                </td>
+
                                 <td
                                     className={`p-3 ${
                                         coin.change24h >= 0

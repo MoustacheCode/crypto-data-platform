@@ -6,26 +6,39 @@ type ApiCoin = {
     symbol: string;
     price: number;
     change_24h: number;
+    image: string;
+    market_cap: number;
+    volume: number;
 };
 
 async function getCoins() {
-    const res = await fetch("http://127.0.0.1:8000/coins", {
-        next: { revalidate: 10 },
-    });
+    let res;
+
+    try {
+        res = await fetch("http://127.0.0.1:8000/coins", {
+            cache: "no-store",
+        });
+    } catch (err) {
+        console.error("Network error:", err);
+        throw new Error("Backend unreachable");
+    }
 
     if (!res.ok) {
+        console.error("Backend returned error:", res.status);
         throw new Error("Failed to fetch coins");
     }
 
     const data: ApiCoin[] = await res.json();
 
-    // Transform backend → frontend shape
     return data.map((coin) => ({
         rank: coin.rank,
         name: coin.name,
         symbol: coin.symbol,
         price: coin.price,
         change24h: coin.change_24h,
+        image: coin.image,
+        marketCap: coin.market_cap,
+        volume: coin.volume,
     }));
 }
 
