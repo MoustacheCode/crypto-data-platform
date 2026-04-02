@@ -1,5 +1,10 @@
 # Real Time Top 10 Crypto Currency Data Platform
 
+<p align="center">
+  <img src="./crypto-plat.png" alt="Crypto Platform Banner" width="100%" />
+</p>
+
+
 ## Overview
 A real-time data platform that aggregates and displays the top 10 cryptocurrencies by market capitalization with live price updates, market metrics, and analytics.
 
